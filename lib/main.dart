@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/quiz_screen.dart';
 import 'package:quiz_app/start_screen.dart';
 
 // [ 5, 10, 15, 20]
@@ -27,7 +28,7 @@ class _MainScreenState extends State<MainScreen> {
             end: Alignment.bottomRight,
             colors: [Color(0xff01356B), Color(0xff0268D1)],
           )),
-          child: const StartScreen(),
+          child: const QuizScreen(),
         ),
       ),
     );
