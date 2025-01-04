@@ -14,11 +14,23 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  Widget currentScreen = const StartScreen();
+  dynamic currentScreen;
+
+  @override
+  void initState() {
+    currentScreen = StartScreen(
+      onButtonPressed: switchScreen,
+    );
+    super.initState();
+  }
 
   void switchScreen() {
     setState(() {
-      currentScreen = const QuizScreen();
+      currentScreen = QuizScreen(
+        onQuizComplete: () {
+          print('quiz complete');
+        },
+      );
     });
   }
 
